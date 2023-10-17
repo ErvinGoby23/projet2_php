@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+<h1>LISTE DES TACHES</h1>
+<ul>
+    {% for task in tasks %}
+        <li>
+            {{ task.title }}
+            <form action="/delete" method="POST">
+                <input type="hidden" name="task_id" value="{{ task.id }}">
+                <input type="submit" value="Delete">
+            </form>
+            <form action="/update" method="POST">
+                <input type="hidden" name="task_id" value="{{ task.id }}">
+                <input type="text" name="new_title" placeholder="Nouveau titre">
+                <input type="submit" value="update">
+            </form>
+            
+
+        </li>
+    {% endfor %}
+</ul>

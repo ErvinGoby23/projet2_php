@@ -1,0 +1,11 @@
+{
+    "name": "ervin/projet2_php",
+    "authors": [
+        {
+            "name": "ervin"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.7"
+    }
+}
